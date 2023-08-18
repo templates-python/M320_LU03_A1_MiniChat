@@ -1,19 +1,14 @@
-# Python-Template (Version 2023)
-## Introduction
-This is the python template we use for our classes. It contains:
-- main.py: Simple script
-- main_test.py: A single pytest-case
-- .gitignore: Used to exclude PyCharm settings and venv
-- requirements.txt: Basic requirements for python and pytest
-## Workflows
-### classroom.yml
-This workflow contains a number of jobs for the automation of classroom assignments.
-#### setup
-Runs only when the repository is first created by a push of 'classroom bot'.
-It triggers a workflow that copies the issues from a source repository into the students repos.
-#### grading
-Does not run when die repository is first created by 'classroom bot'.
-It triggers a workflow for autograding using the tests in /.github/classroom/autograding.json
+### Ziel
 
-### copyissues.yml
-The workflow to copy the issues with manual trigger.
+Sie können durch Methodenaufrufe Daten zwischen Objekten austauschen.
+
+### Auftrag
+
+Laden Sie die Klasse **mini_chat.py** in Ihre Entwicklungsumgebung.
+
+1. Führen Sie die Klasse aus und überlegen Sie sich, wie die Kommunikation zwischen den Objekten abläuft.
+2. Ändern Sie die Kommunikation, in dem Sie eigene Objekte erstellen und einen Dialog kreieren. Wichtig dabei: den Namen der Objekte müssen Sie immer über den getter `name` lesen.
+
+### Abgabe
+
+Zeigen Sie Ihrer Lehrperson den von Ihnen erstellten Dialog und erklären Sie, wie die Kommunikation genau abläuft.
