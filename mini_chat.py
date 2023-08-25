@@ -22,21 +22,20 @@ class MiniChat:
         print(f'from {self}')
         receiver.get_a_message(f'Content: {message}')
 
-
     def get_a_message(self, message):
         '''
         Empfängt eine Meldung und gibt diese am Stdout aus.
         :param message: eine Nachricht
         '''
         print(f'to {self}\n{message}')
-        
+
     def __str__(self):
         return self.name
-        
 
-if __name__ == "__main__":
+
+def main():
     # die beteilgten Objekte
-    max    = MiniChat('Max')
+    max = MiniChat('Max')
     moritz = MiniChat('Moritz')
     lempel = MiniChat('Lempel')
     # die Kommunikation
@@ -45,7 +44,11 @@ if __name__ == "__main__":
     lempel.send_a_message_to(max, f'Lieber {max} das kann für dich und {moritz} böse enden')
     #
     # eigene Kommunikation mit eigenen Objekten
-    lulu  = MiniChat('Lulu')
+    lulu = MiniChat('Lulu')
     randy = MiniChat('Randy')
     lulu.send_a_message_to(randy, f'hallo {randy} wo gehen wir heute essen')
     randy.send_a_message_to(lulu, 'ins Olivo')
+
+
+if __name__ == "__main__":
+    main()
