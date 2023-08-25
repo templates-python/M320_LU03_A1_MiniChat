@@ -44,10 +44,6 @@ def main():
     lempel.send_a_message_to(max, f'Lieber {max} das kann für dich und {moritz} böse enden')
     #
     # eigene Kommunikation mit eigenen Objekten
-    lulu = MiniChat('Lulu')
-    randy = MiniChat('Randy')
-    lulu.send_a_message_to(randy, f'hallo {randy} wo gehen wir heute essen')
-    randy.send_a_message_to(lulu, 'ins Olivo')
 
 
 if __name__ == "__main__":
