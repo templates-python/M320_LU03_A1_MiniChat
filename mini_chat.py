@@ -19,7 +19,7 @@ class MiniChat:
         :param message: Inhalt der Mitteilung
         :param receiver: Empfänger der Mitteilung
         '''
-        print(f'from {self}')
+        print(f'from {self.name}')
         receiver.get_a_message(f'Content: {message}')
 
     def get_a_message(self, message):
@@ -27,10 +27,9 @@ class MiniChat:
         Empfängt eine Meldung und gibt diese am Stdout aus.
         :param message: eine Nachricht
         '''
-        print(f'to {self}\n{message}')
+        print(f'to {self.name}\n{message}')
 
-    def __str__(self):
-        return self.name
+
 
 
 def main():
@@ -39,14 +38,14 @@ def main():
     moritz = MiniChat('Moritz')
     lempel = MiniChat('Lempel')
     # die Kommunikation
-    max.send_a_message_to(moritz, f'hallo {moritz} wollen wir {lempel} ein wenig ärgern?')
+    max.send_a_message_to(moritz, f'hallo {moritz.name} wollen wir {lempel.name} ein wenig ärgern?')
     moritz.send_a_message_to(max, f'aber sicher')
-    lempel.send_a_message_to(max, f'Lieber {max} das kann für dich und {moritz} böse enden')
+    lempel.send_a_message_to(max, f'Lieber {max.name} das kann für dich und {moritz.name} böse enden')
     #
     # eigene Kommunikation mit eigenen Objekten
     lulu = MiniChat('Lulu')
     randy = MiniChat('Randy')
-    lulu.send_a_message_to(randy, f'hallo {randy} wo gehen wir heute essen')
+    lulu.send_a_message_to(randy, f'hallo {randy.name} wo gehen wir heute essen')
     randy.send_a_message_to(lulu, 'ins Olivo')
 
 
